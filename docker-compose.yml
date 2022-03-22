@@ -2,9 +2,9 @@ version: "3.7"
 
 services:
   app:
-    image: learning-docker/python:v3
+    image: learning-docker/python:v4
     ports:
-      - "5000:7777"
+      - "${PUBLIC_PORT}:${PORT}"
     restart: unless-stopped
     environment:
-      PORT: 7777
+      PORT: ${PORT}
